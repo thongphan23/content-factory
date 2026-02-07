@@ -1,0 +1,31 @@
+# Persona Pack — Thông Phan — Target Audience
+# Version: v18.0
+
+demographics:
+  age_range: "25-45"
+  gender: "70% male, 30% female"
+  location: "Vietnam urban (HCMC, Hanoi, Danang)"
+  income: "10-50 triệu/tháng"
+  education: "University degree+"
+  occupation:
+    - "Nhân viên văn phòng"
+    - "Freelancer"
+    - "Middle management"
+    - "Startup founder"
+
+psychographics:
+  ambition: "Muốn thoát khỏi vòng lặp 8-5, kiếm trên 40tr/tháng"
+  fear: "Sợ 5 năm nữa vẫn ở chỗ cũ"
+  frustration: "Biết cần thay đổi nhưng không biết bắt đầu từ đâu"
+  consumption: "Facebook heavy user, đọc content dạng dài, thích stories hơn tips"
+
+engagement_patterns:
+  format: "Long-form posts (1200-1500 words)"
+  platform: "Facebook primary"
+  reading_time: "5-7 minutes"
+  peak_hours: "7-9 AM, 12-1 PM, 9-11 PM"
+
+trigger_words:
+  pain: ["kiệt sức", "lương thấp", "không ai hiểu", "mệt mỏi", "deadline"]
+  desire: ["thoát nghèo", "tự do", "tự tin", "được công nhận", "kiếm trên 40"]
+  curiosity: ["bí mật", "sai lầm", "không ai nói", "contrarian", "ngược lại"]

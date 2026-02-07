@@ -1,0 +1,159 @@
+# Obsidian DIKW Bridge — Configuration
+# Version: v18.1
+# Purpose: Cấu hình kết nối Obsidian vault → Content Factory pipeline
+
+---
+
+# Vault connection
+vault:
+  path: "C:\\Obsidian\\ATS-Desktop"
+  
+  # Folders to scan for knowledge injection
+  scan_folders:
+    primary:
+      - path: "01-Atomic/Stories"
+        dikw_layer: "wisdom"
+        relevance_weight: 10
+        description: "Câu chuyện thực — Wisdom layer cao nhất"
+      
+      - path: "01-Atomic/Insights"
+        dikw_layer: "knowledge"
+        relevance_weight: 7
+        description: "Phân tích sâu — Knowledge layer"
+      
+      - path: "01-Atomic/Frameworks"
+        dikw_layer: "knowledge"
+        relevance_weight: 5
+        description: "Mô hình tư duy — Structured Knowledge"
+      
+      - path: "01-Atomic/Concepts"
+        dikw_layer: "information"
+        relevance_weight: 3
+        description: "Khái niệm — Information layer"
+      
+      - path: "01-Atomic/Quotes"
+        dikw_layer: "data"
+        relevance_weight: 1
+        description: "Trích dẫn — Data layer"
+      
+      - path: "01-Atomic/Data-Points"
+        dikw_layer: "data"
+        relevance_weight: 1
+        description: "Số liệu — Data layer"
+
+    secondary:
+      - path: "01-Atomic/Pain-Points"
+        dikw_layer: "information"
+        relevance_weight: 4
+        description: "Nỗi đau audience — useful cho hook + vivid"
+
+  # --- STORY SOURCES (v18.1) ---
+  # 4-layer scanning cho personal stories — ưu tiên Wisdom layer
+  story_sources:
+    tier_1_structured:
+      path: "01-Atomic/Stories"
+      priority: 1
+      description: "Stories đã có YAML frontmatter + structured body"
+      scan_mode: "direct"       # Đọc trực tiếp, không cần extract
+      
+    tier_2_viral_posts:
+      path: "Thông Phan/Viral Posts"
+      priority: 2
+      description: "Bài viral (>500 shares) chứa personal anecdotes"
+      scan_mode: "extract"      # Cần extract stories từ nội dung bài
+      extract_patterns:
+        - "Tui có quen"
+        - "Bản thân tui"
+        - "Chuyện là"
+        - "Hồi đó tui"
+        - "Có ông/bà"
+        - "Cẻm ơn anh/chị"
+      verified: true            # Đã public = verified
+      
+    tier_3_posted:
+      path: "Thông Phan/Posted"
+      priority: 3
+      description: "Bài đã xuất bản, có thể chứa stories chưa extract"
+      scan_mode: "extract"
+      verified: true
+      
+    tier_4_reflections:
+      path: "Content/Reflective Writing.md"
+      priority: 4
+      description: "Long-form reflections, personal insights"
+      scan_mode: "extract"
+      confidence_default: 0.6   # Thấp hơn vì chưa public
+
+  # Folders explicitly excluded
+  exclude:
+    - ".obsidian"
+    - ".smart-env"
+    - ".git"
+    - "Template"
+    - "_Templates"
+    - "_System"
+
+---
+
+# Atom matching rules
+matching:
+  # How to find relevant atoms
+  method: "topic_tag_matching"
+  
+  # Match atom's YAML frontmatter `topic` array against post's topic keywords
+  steps:
+    1: "Extract keywords from post topic/idea brief"
+    2: "Scan vault atoms, read YAML frontmatter `topic` field"
+    3: "Calculate relevance = overlap(post_keywords, atom_topics) × dikw_weight"
+    4: "Sort by relevance score descending"
+    5: "Return top 5 atoms"
+
+  # Minimum relevance to be included
+  min_relevance: 3
+
+  # Maximum atoms to inject per post
+  max_atoms: 5
+
+---
+
+# DIKW Layer Priority
+dikw_priority:
+  wisdom:
+    weight: 10
+    source: "Stories"
+    usage: "Inject directly as narrative in body/closing"
+    rule: "Verified story → use as-is, rewrite in Voice DNA"
+  
+  knowledge:
+    weight: 7
+    source: "Insights, Frameworks"
+    usage: "Reinterpret as supporting evidence or framework"
+    rule: "Paraphrase in Voice DNA, cite as 'insight' not 'quote'"
+  
+  information:
+    weight: 3
+    source: "Concepts, Pain-Points"
+    usage: "Background context, definitions"
+    rule: "Weave naturally into narrative, don't lecture"
+  
+  data:
+    weight: 1
+    source: "Quotes, Data-Points"
+    usage: "Specific numbers, quotes for authority"
+    rule: "Use as spice, not main ingredient"
+
+---
+
+# POKA-YOKE Rules
+poka_yoke:
+  - rule: "NO_FABRICATION"
+    description: "Nếu vault KHÔNG có atom liên quan → bỏ qua. KHÔNG ĐƯỢC BỊA."
+  
+  - rule: "SOURCE_VERIFICATION"
+    description: "Chỉ dùng atoms có status != 'rejected' trong frontmatter"
+  
+  - rule: "ATTRIBUTION"
+    description: "Ghi rõ atom source trong content header metadata"
+  
+  - rule: "CONFIDENCE_THRESHOLD"
+    description: "Chỉ inject atoms có confidence >= 0.5 trong frontmatter"

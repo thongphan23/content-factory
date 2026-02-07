@@ -1,0 +1,67 @@
+# Content Pillars - Thông Phan
+# Version: v17.0
+# Purpose: 4 trụ cột nội dung cho idea curation
+
+pillars:
+  pillar_1:
+    name: "Personal Mastery"
+    theme: "Phát triển bản thân thực chiến"
+    topics:
+      - "Quản lý năng lượng & thời gian"
+      - "Discipline vs Motivation"
+      - "Deep Work & Productivity"
+      - "Self-awareness & Growth mindset"
+    pain_points:
+      - "Mệt mỏi kinh niên"
+      - "Procrastination"
+      - "Thiếu direction"
+    target_emotion: "Empowerment"
+
+  pillar_2:
+    name: "Career & Money"
+    theme: "Sự nghiệp & thu nhập"
+    topics:
+      - "Salary negotiation"
+      - "Career switching"
+      - "Building leverage"
+      - "Income streams"
+    pain_points:
+      - "Lương thấp, workload cao"
+      - "5 năm cùng vị trí"
+      - "Sợ rủi ro thay đổi"
+    target_emotion: "Aspiration"
+
+  pillar_3:
+    name: "Mindset & Mental Health"
+    theme: "Tư duy & sức khỏe tinh thần"
+    topics:
+      - "Burnout recovery"
+      - "Emotional regulation"
+      - "Decision making"
+      - "Fear management"
+    pain_points:
+      - "Kiệt sức không biết tại sao"
+      - "Always anxious"
+      - "Overthinking"
+    target_emotion: "Relief & Hope"
+
+  pillar_4:
+    name: "Relationships & Communication"
+    theme: "Quan hệ & giao tiếp"
+    topics:
+      - "Workplace relationships"
+      - "Leadership communication"
+      - "Conflict resolution"
+      - "Building tribe"
+    pain_points:
+      - "Cô đơn trong crowd"
+      - "Không ai hiểu mình"
+      - "Sợ confrontation"
+    target_emotion: "Connection"
+
+rotation_rules:
+  weekly:
+    - "Mỗi tuần ít nhất 2 pillars khác nhau"
+    - "Không viết cùng 1 pillar 3 bài liên tiếp"
+  monthly:
+    - "Tất cả 4 pillars phải appear ít nhất 2 lần/tháng"

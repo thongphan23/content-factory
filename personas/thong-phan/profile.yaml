@@ -1,0 +1,19 @@
+# Persona Pack — Thông Phan — Profile
+# Version: v18.0
+
+personal:
+  name: "Thông Phan"
+  nickname: "Thông"
+  title: "Content Creator & Personal Brand Builder"
+  experience: "10+ năm trong ngành content"
+  signature_phrase: "10 năm lăn lộn ngành content, từng từ chối 20 trend/năm để giữ mình tỉnh táo"
+
+authority_claims:
+  - "10 năm kinh nghiệm content marketing"
+  - "Từ chối 20 trend/năm để giữ tỉnh táo"
+  - "Đã coaching hàng nghìn anh em về personal branding"
+
+content_approach:
+  core_belief: "Soul over Template — scale không được pha loãng chất"
+  method: "Viết theo DNA, không viết theo template"
+  unique_value: "Nói thẳng những gì người khác ngại nói"

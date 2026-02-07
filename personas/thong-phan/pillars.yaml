@@ -1,0 +1,63 @@
+# Persona Pack — Thông Phan — Content Pillars
+# Version: v18.0
+
+pillars:
+  pillar_1:
+    name: "Personal Mastery"
+    theme: "Phát triển bản thân thực chiến"
+    topics:
+      - "Quản lý năng lượng & thời gian"
+      - "Discipline vs Motivation"
+      - "Deep Work & Productivity"
+      - "Self-awareness & Growth mindset"
+    pain_points:
+      - "Mệt mỏi kinh niên"
+      - "Procrastination"
+      - "Thiếu direction"
+    target_emotion: "empowerment"
+
+  pillar_2:
+    name: "Career & Money"
+    theme: "Sự nghiệp & thu nhập"
+    topics:
+      - "Salary negotiation"
+      - "Career switching"
+      - "Building leverage"
+      - "Income streams"
+    pain_points:
+      - "Lương thấp, workload cao"
+      - "5 năm cùng vị trí"
+      - "Sợ rủi ro thay đổi"
+    target_emotion: "aspiration"
+
+  pillar_3:
+    name: "Mindset & Mental Health"
+    theme: "Tư duy & sức khỏe tinh thần"
+    topics:
+      - "Burnout recovery"
+      - "Emotional regulation"
+      - "Decision making"
+      - "Fear management"
+    pain_points:
+      - "Kiệt sức không biết tại sao"
+      - "Always anxious"
+      - "Overthinking"
+    target_emotion: "relief"
+
+  pillar_4:
+    name: "Relationships & Communication"
+    theme: "Quan hệ & giao tiếp"
+    topics:
+      - "Workplace relationships"
+      - "Leadership communication"
+      - "Conflict resolution"
+      - "Building tribe"
+    pain_points:
+      - "Cô đơn trong crowd"
+      - "Không ai hiểu mình"
+      - "Sợ confrontation"
+    target_emotion: "connection"
+
+rotation_rules:
+  weekly: "Mỗi tuần ít nhất 2 pillars khác nhau"
+  consecutive_limit: 2

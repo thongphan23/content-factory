@@ -1,0 +1,60 @@
+# Persona Pack — Thông Phan — Authority Library
+# Version: v18.0
+
+experts:
+  - name: "Cal Newport"
+    field: "Productivity"
+    credentials: "Giáo sư MIT, tác giả 'Deep Work' (Làm việc sâu)"
+    cascade: "nổi tiếng đến mức Basecamp copy cả hệ thống của ổng"
+    topics: ["Deep Work", "Focus", "Digital Minimalism"]
+    used_count: 1
+
+  - name: "Tony Schwartz"
+    field: "Energy"
+    credentials: "CEO The Energy Project, tư vấn cho Google/Facebook"
+    cascade: "tác giả 'The Way We're Working Isn't Working'"
+    topics: ["Energy management", "Burnout"]
+    used_count: 0
+
+  - name: "Sophie Leroy"
+    field: "Psychology"
+    credentials: "Giáo sư University of Washington"
+    cascade: "phát hiện 'Attention Residue' (Dư tàn chú ý) sau 10 năm nghiên cứu"
+    topics: ["Multitasking", "Focus"]
+    used_count: 1
+
+  - name: "James Gross"
+    field: "Emotion"
+    credentials: "Giáo sư Stanford, 200+ nghiên cứu"
+    cascade: "chuyên gia hàng đầu thế giới về Emotion Regulation"
+    topics: ["Emotional Intelligence"]
+    used_count: 0
+
+  - name: "Warren Buffett"
+    field: "Finance"
+    credentials: "Tỷ phú đầu tư, triết lý 'Circle of Competence' (Vòng tròn năng lực)"
+    cascade: "ông già 90 tuổi ngồi im một chỗ vẫn kiếm tỷ đô"
+    topics: ["Focus", "Strategy", "Patience"]
+    used_count: 1
+
+  - name: "Yuval Noah Harari"
+    field: "Philosophy"
+    credentials: "Tác giả Sapiens, bán 45 triệu bản"
+    cascade: "được Bill Gates recommend"
+    topics: ["AI", "Consciousness", "Future"]
+    used_count: 1
+
+  - name: "Po-Shen Loh"
+    field: "Education"
+    credentials: "Giáo sư Carnegie Mellon, coach đội tuyển Toán Mỹ"
+    cascade: "nổi tiếng đến mức startup edtech triệu đô"
+    topics: ["Empathy", "Trust", "Problem-solving"]
+    used_count: 0
+
+citation_patterns:
+  - "full_intro_cascade"
+  - "soft_name_drop"
+  - "achievement_first"
+  - "story_based"
+
+diversity_rule: "Không dùng cùng 1 expert quá 2 lần trong 5 bài liên tiếp"

@@ -1,0 +1,30 @@
+# Persona Pack Template — Vivid Reality Anchor Library
+# Version: v18.0
+
+# Kho hình ảnh cụ thể thay thế language trừu tượng
+# Tùy chỉnh theo audience và niche của bạn
+
+vivid_pains: []
+# Template:
+#  - category: "Financial Pain"
+#    anchors:
+#      - "40 không nhà, 30 tài khoản < 100tr"
+#      - "Cuối tháng nhìn tài khoản rồi thở dài"
+
+vivid_desires: []
+# Template:
+#  - category: "Financial Freedom"
+#    anchors:
+#      - "Mua quà sinh nhật mẹ mà không cần coi giá"
+
+vivid_scenarios: []
+# Template:
+#  - category: "Morning Scenario"
+#    anchors:
+#      - "Chuông báo thức réo 5h30, tay quờ quạng tắt..."
+
+usage_rules:
+  min_per_post: 3
+  hook: "Dùng vivid pain/desire ngay câu đầu"
+  body: "Thay mỗi câu trừu tượng bằng 1 vivid scenario"
+  closing: "Dùng vivid desire để vẽ tương lai nếu hành động"

@@ -1,0 +1,27 @@
+# Persona Pack Template — Target Audience
+# Version: v18.0
+
+demographics:
+  age_range: ""              # "25-45"
+  gender: ""                 # "70% male, 30% female" hoặc "balanced"
+  location: ""               # "Vietnam urban" hoặc "Global"
+  income: ""                 # "10-50 triệu/tháng"
+  education: ""              # "University degree+"
+  occupation: []             # ["Nhân viên văn phòng", "Freelancer"]
+
+psychographics:
+  ambition: ""               # Mục tiêu lớn nhất
+  fear: ""                   # Nỗi sợ lớn nhất
+  frustration: ""            # Điều frustrate nhất
+  consumption: ""            # Cách tiêu thụ content
+
+engagement_patterns:
+  format: ""                 # "Long-form posts (1200-1500 words)"
+  platform: ""               # "Facebook" | "LinkedIn" | "Blog"
+  reading_time: ""           # "5-7 minutes"
+  peak_hours: ""             # "7-9 AM, 9-11 PM"
+
+trigger_words:
+  pain: []                   # Từ kích hoạt nỗi đau
+  desire: []                 # Từ kích hoạt khát vọng
+  curiosity: []              # Từ kích hoạt tò mò
