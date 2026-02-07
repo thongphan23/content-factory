@@ -1,12 +1,16 @@
 # Obsidian DIKW Bridge — Configuration
-# Version: v18.1
+# Version: v18.2
 # Purpose: Cấu hình kết nối Obsidian vault → Content Factory pipeline
+#
+# ⚠️ SETUP: Thay {{VAULT_PATH}} bằng đường dẫn Obsidian vault của bạn
+# Ví dụ Windows: "C:\\Obsidian\\MyVault"
+# Ví dụ Mac: "/Users/yourname/Obsidian/MyVault"
 
 ---
 
 # Vault connection
 vault:
-  path: "C:\\Obsidian\\ATS-Desktop"
+  path: "{{VAULT_PATH}}"    # ← THAY ĐƯỜNG DẪN VAULT CỦA BẠN VÀO ĐÂY
   
   # Folders to scan for knowledge injection
   scan_folders:

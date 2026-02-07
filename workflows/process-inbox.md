@@ -4,7 +4,9 @@ description: 📥 Xử lý Knowledge Inbox - Antigravity trực tiếp phân tí
 
 # Process Knowledge Inbox Workflow
 
-Workflow này để Antigravity xử lý các notes pending trong `C:\Obsidian\ATS-Desktop\00-Inbox\`.
+Workflow này để Antigravity xử lý các notes pending trong `{{VAULT_PATH}}/00-Inbox/`.
+
+> ⚠️ `{{VAULT_PATH}}` = đường dẫn Obsidian vault, cấu hình trong `obsidian-bridge/config.yaml`
 
 ## Khi nào sử dụng
 - Sau khi sync content từ `inb.thongphan.com`
@@ -14,7 +16,7 @@ Workflow này để Antigravity xử lý các notes pending trong `C:\Obsidian\A
 
 ### 1. Đọc files pending
 ```
-Folder: C:\Obsidian\ATS-Desktop\00-Inbox\
+Folder: {{VAULT_PATH}}/00-Inbox/
 Filter: Files có `status: pending` trong frontmatter
 ```
 

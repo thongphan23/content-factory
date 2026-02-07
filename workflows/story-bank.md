@@ -4,7 +4,7 @@ description: 📖 Story Bank — Nhập raw story → xuất structured atoms v�
 
 # /story-bank Workflow
 
-Quy trình chuyển đổi câu chuyện thô (raw life stories) từ Thông Phan thành structured story atoms trong Obsidian vault.
+Quy trình chuyển đổi câu chuyện thô (raw life stories) thành structured story atoms trong Obsidian vault.
 
 // turbo-all
 
@@ -26,7 +26,7 @@ User kể câu chuyện thô, chưa cấu trúc. Ví dụ:
 > "Hồi đó tui làm marketing cho công ty X, khách hàng chê giá đắt, team muốn giảm giá nhưng tui quyết giữ giá và thêm workshop miễn phí. Kết quả doanh thu tăng 40%..."
 
 ### Cách 2: File trong 00-Inbox
-Raw story được ghi vào `c:\Obsidian\ATS-Desktop\00-Inbox\` qua Knowledge Inbox app.
+Raw story được ghi vào `{{VAULT_PATH}}/00-Inbox/` qua Knowledge Inbox app.
 
 ---
 
@@ -100,7 +100,9 @@ Categories:
 
 ### Bước 4: Lưu vào vault
 
-Lưu file vào: `c:\Obsidian\ATS-Desktop\01-Atomic\Stories\`
+Lưu file vào: `{{VAULT_PATH}}/01-Atomic/Stories/`
+
+> ⚠️ `{{VAULT_PATH}}` = đường dẫn Obsidian vault, cấu hình trong `obsidian-bridge/config.yaml`
 
 ### Bước 5: Xác nhận với user
 

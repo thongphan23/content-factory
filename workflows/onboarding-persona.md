@@ -15,14 +15,16 @@ description: 🎨 Onboarding Persona Pack - Tạo cấu hình cá nhân cho Cont
 
 // turbo
 ```bash
-mkdir -p "d:/Antigravity Agent/knowledge/content-factory/personas/[username]"
+# Tạo trong thư mục personas/ của Content Factory
+mkdir -p "personas/[username]"
 ```
 
 ### Bước 2: Copy templates
 
 // turbo
 ```bash
-Copy-Item "d:/Antigravity Agent/knowledge/content-factory/personas/_template/*" "d:/Antigravity Agent/knowledge/content-factory/personas/[username]/" -Recurse
+# Copy từ _template vào persona mới
+Copy-Item "personas/_template/*" "personas/[username]/" -Recurse
 ```
 
 ### Bước 3: Hỏi 3 câu bắt buộc — CHỈ 3 CÂU
@@ -44,7 +46,7 @@ Copy-Item "d:/Antigravity Agent/knowledge/content-factory/personas/_template/*" 
 ### Bước 4: Test ngay
 
 ```
-/thongphan-post
+/content-post
 Topic: [topic bất kỳ]
 Persona: [username]
 ```
